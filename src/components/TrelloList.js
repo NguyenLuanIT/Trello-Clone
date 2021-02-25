@@ -1,11 +1,14 @@
 import React from 'react';
 import TrelloCard from "./TrelloCard";
+import TrelloActionButton from "../components/TrelloActionButton";
+
 
 const TrelloList = ({ title, cards }) => {
     return (
         <div style={styles.container}>
             <h4>{title}</h4>
-            {cards.map((card) => <TrelloCard text={card.text} />)}
+            {cards.map((card, index) => <TrelloCard text={card.text} key={index} />)}
+            <TrelloActionButton />
         </div>
     )
 }
@@ -18,7 +21,5 @@ const styles = {
         width: 300,
         padding: 8,
         marginRight: 8,
-        // paddingTop: 2,
-        // paddingLeft: 8,
     }
 }

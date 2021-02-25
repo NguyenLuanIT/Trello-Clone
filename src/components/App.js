@@ -1,32 +1,13 @@
 import React from 'react';
-import TrelloList from "./TrelloList";
-import { connect } from "react-redux";
+import HomePage from '../pages/HomePages';
 
-function App({ lists }) {
+function App() {
   return (
     <div className="App">
-      <h2>hello world</h2>
-      <div style={styles.listsContainer}>
-        {lists.map((list) =>
-          <TrelloList title={list.title} cards={list.cards} />
-        )}
-      </div>
+      <HomePage />
     </div>
   );
 }
-const mapStateToProps = state => ({
-  lists: state.lists
-})
-
-const styles = {
-  listsContainer: {
-    display: "flex",
-    flexDirection: "row",
-    // padding: 8,
-    // backgroundColor: "blue",
-  },
-}
-
-export default connect(mapStateToProps)(App);
+export default (App);
 
 

@@ -46,6 +46,10 @@ const initialState = [
             {
                 id: 2,
                 text: "text 3"
+            },
+            {
+                id: 3,
+                text: "text 4"
             }
         ]
     }
